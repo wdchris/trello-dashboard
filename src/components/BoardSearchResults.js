@@ -44,11 +44,12 @@ const BoardSearchResults = ({ classes, rowData }) => {
               hover={true}
               className={classes.row}
               onClick={() => window.open(row.board.shortUrl)}
+              data-test={`result-board-${row.board.id}`}
             >
               <TableCell component="th" scope="row">
                 {row.board.name}
               </TableCell>
-              <TableCell>
+              <TableCell data-test={`result-board-${row.board.id}-cards`}>
                 {row.cards.map(card => card.name).join(",  ")}
               </TableCell>
             </TableRow>

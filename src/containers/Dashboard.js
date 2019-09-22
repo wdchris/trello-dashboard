@@ -85,6 +85,7 @@ class Dashboard extends Component {
           onChange={this.handleChange}
           options={listOptions}
           placeholder={"Choose a list name to filter..."}
+          data-test="select-trello-list"
         />
         <BoardSearchResults rowData={filteredCards} />
       </React.Fragment>
